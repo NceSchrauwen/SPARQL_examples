@@ -1,3 +1,5 @@
+// Fetch the result of a wikidata SPARQL query through the wikidata query service and print to console 
+
 // Class with a constructor method and a query method
 class SPARQLQueryDispatcher {
 	constructor( endpoint ) {
@@ -38,8 +40,3 @@ queryDispatcher.query( sparqlQuery ).then( result => {  //take the query and res
 }).catch( ( result ) => {  //if the promise fails then execute the catch 
     console.log( "The query has failed: " + result ); //logs an error message if the query has failed
 })
-
-//------ Brings the values as objects instead of just values---
-// queryDispatcher.query( sparqlQuery ).then( result => console.log( result.results.bindings[0].catLabel.value ) );
-//------
-
